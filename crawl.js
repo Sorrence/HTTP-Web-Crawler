@@ -49,10 +49,8 @@ function getURLsFromHTML(HTMLBody, baseURL){
         else{
             try{
                 newUrlObj = new URL(linkElement.href)
-                if(newUrlObj.href === 'about:blank#content' || newUrlObj.href === 'about:blank#'){}
-                else{
-                    urls.push(newUrlObj.href)
-                }
+                urls.push(newUrlObj.href)
+
             }
             catch(err){
                 if(newUrlObj.href === 'about:blank' || 'about:blank#' || 'about:blank#content'){}
